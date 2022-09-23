@@ -89,13 +89,12 @@ var qaList = [
       dialogBox.scrollTop = dialogBox.scrollHeight; // 捲動到最下方。
     }
 
-    function answer() { // 回答問題
+        function answer() { // 回答問題
       setTimeout(function () { // 停頓 1 到 3 秒再回答問題 (因為若回答太快就不像人了，人打字需要時間)
-
-        append(">> "+r);
-
+        append(">> "+getAnswer());
       }, 1000+random(2000));
     }
+    
     
     function getAnswer() {
       var say = document.getElementById("say").value; // 取得使用者輸入的問句。
